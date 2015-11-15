@@ -2,10 +2,12 @@
     "name" : "zedisdog/laravel-schema-extend",
     "type" : "library",
     "description" : "support MySQL 'table comment'.",
-    "authors" : {
-        "name" : "zed",
-        "email" : "2692273254@qq.com"
-    },
+    "authors" : [
+        {
+            "name": "zed",
+            "email": "2692273254@qq.com"
+        }
+    ],
     "require" : {
         "laravel/framework": "5.1.*"
     },
