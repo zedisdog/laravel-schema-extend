@@ -1,4 +1,4 @@
-<?php namespace FiveSay\LaravelSchemaExtend;
+<?php namespace zedisdog\LaravelSchemaExtend;
 
 use Illuminate\Support\Fluent;
 use Illuminate\Database\Schema\Blueprint;
@@ -10,18 +10,19 @@ class MySqlGrammar extends BaseMySqlGrammar
     /**
      * Compile a create table command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
-     * @param  \Illuminate\Support\Fluent  $command
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \Illuminate\Database\Schema\Blueprint $blueprint
+     * @param  \Illuminate\Support\Fluent $command
+     * @param  \Illuminate\Database\Connection $connection
+     * @param string $comment
      * @return string
      */
-    public function compileCreate(Blueprint $blueprint, Fluent $command, Connection $connection, $comment='')
+    public function compileCreate(Blueprint $blueprint, Fluent $command, Connection $connection)
     {
         $sql = parent::compileCreate($blueprint, $command, $connection);
-        if ($comment)
+        if (isset($blueprint->comment))
         {
-            $comment = str_replace("'", "\'", $comment);
-            $sql .= " comment = '".$comment."'";
+            $blueprint->comment = str_replace("'", "\'", $blueprint->comment);
+            $sql .= " comment = '".$blueprint->comment."'";
         }
         return $sql;
     }
