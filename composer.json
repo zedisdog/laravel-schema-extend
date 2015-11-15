@@ -13,8 +13,8 @@
     },
     "time" : "2015-11-16",
     "autoload" : {
-        "psr-4" : {
-            "zedisdog\\" : "src/"
+        "psr-0" : {
+            "zedisdog\\LaravelSchemaExtend" : "src/"
         }
     }
 
