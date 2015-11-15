@@ -1,0 +1,19 @@
+{
+    "name" : "zedisdog/laravel-schema-extend",
+    "type" : "library",
+    "description" : "support MySQL 'table comment'.",
+    "authors" : {
+        "name" : "zed",
+        "email" : "2692273254@qq.com"
+    },
+    "require" : {
+        "laravel/framework": "5.1.*"
+    },
+    "time" : "2015-11-16",
+    "autoload" : {
+        "psr-0" : {
+            "zedisdog\\LaravelSchemaExtend" : "src/"
+        }
+    }
+
+}
