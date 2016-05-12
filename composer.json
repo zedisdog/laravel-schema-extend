@@ -9,7 +9,7 @@
         }
     ],
     "require" : {
-        "laravel/framework": "5.1.*"
+        "laravel/framework": "5.*"
     },
     "time" : "2015-11-16",
     "autoload" : {
