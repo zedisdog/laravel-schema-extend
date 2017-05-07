@@ -13,7 +13,7 @@
     },
     "autoload" : {
         "psr-4" : {
-            "Jialeo\\LaravelSchemaExtend" : "src/"
+            "Jialeo\\LaravelSchemaExtend\\" : "src/"
         }
     }
 }
