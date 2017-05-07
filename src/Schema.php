@@ -1,5 +1,5 @@
 <?php
-namespace zedisdog\LaravelSchemaExtend;
+namespace Jialeo\LaravelSchemaExtend;
 
 use \Illuminate\Support\Facades\Facade;
 

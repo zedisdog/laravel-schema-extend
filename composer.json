@@ -1,20 +1,19 @@
 {
-    "name" : "zedisdog/laravel-schema-extend",
+    "name" : "jialeo/laravel-schema-extend",
     "type" : "library",
-    "description" : "support MySQL 'table comment'.",
+    "description" : "support MySQL 'table comment','int' data type length setting",
     "authors" : [
         {
-            "name": "zed",
-            "email": "2692273254@qq.com"
+            "name": "chenjialiang",
+            "email": "chenjialiang@han-zi.cn"
         }
     ],
     "require" : {
         "laravel/framework": "5.*"
     },
-    "time" : "2015-11-16",
     "autoload" : {
-        "psr-0" : {
-            "zedisdog\\LaravelSchemaExtend" : "src/"
+        "psr-4" : {
+            "Jialeo\\LaravelSchemaExtend" : "src/"
         }
     }
 }
