@@ -26,4 +26,75 @@ class MySqlGrammar extends BaseMySqlGrammar
         }
         return $sql;
     }
+
+
+    /**
+     * 重载typeInteger
+     * Create the column definition for an integer type.
+     *
+     * @param  \Illuminate\Support\Fluent $column
+     * @return string
+     */
+    public function typeInteger(Fluent $column)
+    {
+        $length_str = !empty($column->length) ? '(' . $column->length . ')' : '';
+
+        return 'int' . $length_str;
+    }
+
+    /**
+     * 重载typeBigInteger
+     * Create the column definition for a big integer type.
+     *
+     * @param  \Illuminate\Support\Fluent $column
+     * @return string
+     */
+    protected function typeBigInteger(Fluent $column)
+    {
+        $length_str = !empty($column->length) ? '(' . $column->length . ')' : '';
+
+        return 'bigint' . $length_str;
+    }
+
+    /**
+     * 重载typeMediumInteger
+     * Create the column definition for a medium integer type.
+     *
+     * @param  \Illuminate\Support\Fluent $column
+     * @return string
+     */
+    protected function typeMediumInteger(Fluent $column)
+    {
+        $length_str = !empty($column->length) ? '(' . $column->length . ')' : '';
+
+        return 'mediumint' . $length_str;
+    }
+
+    /**
+     * 重载typeTinyInteger
+     * Create the column definition for a tiny integer type.
+     *
+     * @param  \Illuminate\Support\Fluent $column
+     * @return string
+     */
+    protected function typeTinyInteger(Fluent $column)
+    {
+        $length_str = !empty($column->length) ? '(' . $column->length . ')' : '';
+
+        return 'tinyint' . $length_str;
+    }
+
+    /**
+     * 重载typeSmallInteger
+     * Create the column definition for a small integer type.
+     *
+     * @param  \Illuminate\Support\Fluent $column
+     * @return string
+     */
+    protected function typeSmallInteger(Fluent $column)
+    {
+        $length_str = !empty($column->length) ? '(' . $column->length . ')' : '';
+
+        return 'smallint' . $length_str;
+    }
 }
