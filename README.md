@@ -46,10 +46,14 @@ Schema::create('tests', function ($table) {
 });
 ```
 
-## 致谢
+## Thanks
 
 - [jialeo](https://github.com/jialeo)
 - [ghostboyzone](https://github.com/ghostboyzone)
 - [xuhuan](https://github.com/xuhuan)
 - [xiaobeicn](https://github.com/xiaobeicn)
 - [5-say](https://github.com/5-say)
+
+
+## PS.
+sorry for my bad english
