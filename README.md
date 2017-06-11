@@ -1,6 +1,8 @@
 laravel-schema-extend
 =====================
 
+[![License](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)](LICENSE)
+
 - support MySQL 'table comment'.
 - 'column comment' is built-in in greater than 5.1 version.
 - support variable length for integer/tinyint/mediumint/smallint/bigint
