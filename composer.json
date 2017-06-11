@@ -1,7 +1,7 @@
 {
     "name" : "zedisdog/laravel-schema-extend",
     "type" : "library",
-    "description" : "support MySQL 'table comment'.",
+    "description" : "supplement for eloquent migration",
     "authors" : [
         {
             "name": "zed",
@@ -11,10 +11,12 @@
     "require" : {
         "laravel/framework": "5.*"
     },
-    "time" : "2015-11-16",
+    "require-dev": {
+        "phpunit/phpunit": "^5.0|^6.0"
+    },
     "autoload" : {
-        "psr-0" : {
-            "zedisdog\\LaravelSchemaExtend" : "src/"
+        "psr-4" : {
+            "Jialeo\\LaravelSchemaExtend\\" : "src/"
         }
     }
 }

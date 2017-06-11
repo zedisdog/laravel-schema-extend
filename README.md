@@ -2,46 +2,53 @@ laravel-schema-extend
 =====================
 
 - support MySQL 'table comment'.
-- 因为网上的不支持5.1以后的版本，所以自己改吧
-- 让 laravel 的 Schema 支持 MySQL “表注释”，5.1以后已经内置了列注释。
+- 'column comment' is built-in in greater than 5.1 version.
+- support variable length for integer/tinyint/mediumint/smallint/bigint
 
 ---
 
-> **不会对官方源码照成任何影响。**  
-> 继承原生 schema，随源码更新。  
+> just extend the original class  
 
 
-## 使用前的准备
+## Install
 
-在 composer.json 文件中申明依赖：
+Require this package with composer using the following command:
 
-* support laravel 5.*
-```json
-"zedisdog/laravel-schema-extend": "～0.5"
+```bash
+composer require zedisdog/laravel-schema-extend
 ```
 
 
-在配置文件 `config/app.php` 中替换“别名”
+modify the alias `Schema` in `config/app.php`:
 
 ```php
-'aliases' => array(
+'aliases' => [
     ...
     // 'Schema' => Illuminate\Support\Facades\Schema::class,
-    'Schema'    => zedisdog\LaravelSchemaExtend\Schema::class,
-),
+    'Schema'    => Jialeo\LaravelSchemaExtend\Schema::class,
+],
 ```
 
-## 使用方法
+## Usage
 
 ```php
 Schema::create('tests', function ($table) {
-    $table->increments('id')->comment('列注释');
-    $table->comment = '表注释';
+    //this is alredy built-in.
+    $table->increments('id')->comment('column comment');
+    
+    $table->integer('int')->default(1)->length(1);
+    $table->bigInteger('big')->default(1)->length(1);
+    $table->smallInteger('small')->default(1)->length(1);
+    $table->tinyInteger('tiny')->default(1)->length(1);
+    $table->mediumInteger('medium')->default(1)->length(1);
+    
+    $table->comment = 'table comment';
 });
 ```
 
 ## 致谢
 
+- [jialeo](https://github.com/jialeo)
 - [ghostboyzone](https://github.com/ghostboyzone)
 - [xuhuan](https://github.com/xuhuan)
 - [xiaobeicn](https://github.com/xiaobeicn)

@@ -1,5 +1,5 @@
 <?php
-namespace zedisdog\LaravelSchemaExtend;
+namespace Jialeo\LaravelSchemaExtend;
 
 use \Illuminate\Support\Facades\Facade;
 
@@ -30,12 +30,12 @@ class Schema extends Facade
 
 
     /**
-     * 引导系统调用我们自定义的 Grammar
+     * lead the system to load custom Grammar
      * @param $connection
      */
     protected static function useCustomGrammar($connection)
     {
-        # 仅针对 MySqlGrammar
+        // just for MySqlGrammar
         if (get_class($connection) === 'Illuminate\Database\MySqlConnection') {
             $MySqlGrammar = $connection->withTablePrefix(new MySqlGrammar);
             $connection->setSchemaGrammar($MySqlGrammar);
