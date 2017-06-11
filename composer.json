@@ -1,6 +1,7 @@
 {
     "name" : "zedisdog/laravel-schema-extend",
     "type" : "library",
+    "license" : "WTFPL",
     "description" : "supplement for eloquent migration",
     "authors" : [
         {
