@@ -1,4 +1,5 @@
-<?php namespace zedisdog\LaravelSchemaExtend;
+<?php
+namespace Jialeo\LaravelSchemaExtend;
 
 use Illuminate\Support\Fluent;
 use Illuminate\Database\Schema\Blueprint;
