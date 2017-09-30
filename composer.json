@@ -19,5 +19,13 @@
         "psr-4" : {
             "Jialeo\\LaravelSchemaExtend\\" : "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+                "Schema": "Jialeo\\LaravelSchemaExtend\\Schema"
+            }
+        }
     }
 }
