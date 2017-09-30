@@ -32,7 +32,7 @@ modify the alias `Schema` in `config/app.php`:
 ```
 
 ### great than 5.5
-just modify use statement from
+just modify `use` statement from
 ```php
 use Illuminate\Support\Facades\Schema;
 ```
