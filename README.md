@@ -20,7 +20,7 @@ Require this package with composer using the following command:
 composer require zedisdog/laravel-schema-extend
 ```
 
-
+###less than 5.5
 modify the alias `Schema` in `config/app.php`:
 
 ```php
@@ -30,6 +30,17 @@ modify the alias `Schema` in `config/app.php`:
     'Schema'    => Jialeo\LaravelSchemaExtend\Schema::class,
 ],
 ```
+
+###great than 5.5
+just modify use statement from
+```php
+use Illuminate\Support\Facades\Schema;
+```
+to
+```php
+use Jialeo\LaravelSchemaExtend\Schema;
+```
+in migrate files.
 
 ## Usage
 
