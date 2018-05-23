@@ -3,6 +3,11 @@ namespace Jialeo\LaravelSchemaExtend;
 
 use \Illuminate\Support\Facades\Facade;
 
+/**
+ * Class Schema
+ * @package Jialeo\LaravelSchemaExtend
+ * @method static create(string $table_name, \Closure $callback)
+ */
 class Schema extends Facade
 {
     /**
