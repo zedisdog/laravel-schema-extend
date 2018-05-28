@@ -56,6 +56,7 @@ Schema::create('tests', function ($table) {
     $table->mediumInteger('medium')->default(1)->length(1);
     
     $table->comment = 'table comment';
+    $table->autoIncrement = 100;
 });
 ```
 

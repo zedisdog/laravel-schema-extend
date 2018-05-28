@@ -20,10 +20,16 @@ class MySqlGrammar extends BaseMySqlGrammar
     public function compileCreate(Blueprint $blueprint, Fluent $command, Connection $connection)
     {
         $sql = parent::compileCreate($blueprint, $command, $connection);
+        // 添加注释
         if (isset($blueprint->comment))
         {
             $blueprint->comment = str_replace("'", "\'", $blueprint->comment);
             $sql .= " comment = '".$blueprint->comment."'";
+        }
+        // 添加自增起始值
+        if (isset($blueprint->autoIncrement)) {
+            $blueprint->autoIncrement = intval($blueprint->autoIncrement);
+            $sql .= " auto_increment = {$blueprint->autoIncrement}";
         }
         return $sql;
     }
