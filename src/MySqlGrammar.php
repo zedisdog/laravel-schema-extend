@@ -23,8 +23,12 @@ class MySqlGrammar extends BaseMySqlGrammar
         // 添加注释
         if (isset($blueprint->comment))
         {
-            $blueprint->comment = str_replace("'", "\'", $blueprint->comment);
-            $sql .= " comment = '".$blueprint->comment."'";
+            $comment = str_replace("'", "\'", $blueprint->comment);
+            if (is_array($sql)) {
+                $sql[0] .= " comment = '".$comment."'";
+            } else {
+                $sql .= " comment = '".$comment."'";
+            }
         }
         // 添加自增起始值
         if (isset($blueprint->autoIncrement)) {
