@@ -1,3 +1,8 @@
+DEPRECATED
+---
+Please note, this project will be deprecated cause table comment in MySQL has been surpported in laravel/framework v9.14.0. see [the issue](https://github.com/laravel/framework/pull/42401).
+===
+
 laravel-schema-extend
 =====================
 
